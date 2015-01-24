@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:inputType="text|textNoSuggestions"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/main_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+
+        <FrameLayout
+            android:id="@+id/main_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:id="@+id/drawer_linear_parent"
+            android:layout_width="240dp"
+            android:layout_gravity="start"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/name_drawer"
+                android:layout_width="fill_parent"
+                android:textSize="40sp"
+                android:background="#FFF"
+                android:gravity="center"
+                android:paddingTop="30dp"
+                android:paddingBottom="30dp"
+                android:layout_height="wrap_content" />
+
+            <ListView
+                android:id="@+id/left_drawer"
+                android:layout_width="match_parent"
+                android:choiceMode="singleChoice"
+                android:layout_below="@id/name_drawer"
+                android:background="#FFF"
+                android:divider="#BBB"
+                android:layout_gravity="start"
+                android:layout_height="match_parent"/>
+        </RelativeLayout>
+
+    </android.support.v4.widget.DrawerLayout>
+</RelativeLayout>

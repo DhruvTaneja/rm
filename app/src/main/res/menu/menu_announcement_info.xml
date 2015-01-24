@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.dhruv.resumemanager.AnnouncementInfo">
+    <item android:id="@+id/star"
+        android:title="@string/menu_search"
+        android:icon="@drawable/ic_action_important"
+        app:showAsAction="always"/>
+</menu>

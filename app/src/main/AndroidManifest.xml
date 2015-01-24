@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dhruv.resumemanager"
+    android:installLocation="internalOnly" >
+
+    <!-- Permissions are declared here -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".Main"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <!-- Config changes = orientation forces it to be in portrait mode only -->
+        <activity
+            android:name=".Splash"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login" >
+        </activity>
+        <activity
+            android:name=".CreatingDB"
+            android:label="@string/title_activity_creating_db" >
+        </activity>
+        <activity
+            android:name=".RecruiterInfo"
+            android:label="@string/title_activity_recruiter_info"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dhruv.resumemanager.Main" />
+        </activity>
+        <activity
+            android:name=".AnnouncementInfo"
+            android:label="@string/title_activity_announcement_info"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dhruv.resumemanager.Main" />
+        </activity>
+
+        <!-- Services declared here -->
+        <service android:name="com.dhruv.dbservices.AnnouncementInitService" />
+        <service android:name="com.dhruv.dbservices.RecruiterInitService" />
+        <service
+            android:name="com.dhruv.backgroundservices.RecruiterBgService"
+            android:exported="false"
+            android:process=":bg_process" >
+            <intent-filter>
+                <action android:name="com.dhruv.resumemanager.OnSystemStart" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.dhruv.backgroundservices.AnnouncementBgService"
+            android:exported="false"
+            android:process=":bg_process" >
+            <intent-filter>
+                <action android:name="com.dhruv.resumemanager.OnSystemStart" />
+            </intent-filter>
+        </service>
+
+        <!-- Receivers -->
+        <receiver android:name="com.dhruv.backgroundservices.OnSystemStartReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="com.dhruv.resumemanager.custom.intent.START_SERVICE" />
+
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".Settings"
+            android:label="@string/title_activity_settings"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dhruv.resumemanager.Main" />
+        </activity>
+        <activity
+            android:name=".ChangeName"
+            android:theme="@style/Base.Theme.AppCompat.Light.Dialog"
+            android:label="@string/title_activity_change_name" >
+        </activity>
+    </application>
+
+</manifest>

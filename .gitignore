@@ -1,0 +1,21 @@
+/build
+build.gradle
+gradle
+.gradle
+gradle.properties
+gradlew
+gradlew.bat
+.idea
+/local.properties
+.navigation
+Notification IDs.txt
+ResumeManager.iml
+settings.gradle
+app/app.iml
+app/app-release.apk
+app/build
+app/build.gradle
+app/.gitignore
+app/libs
+app/proguard-rules.pro
+app/manifest-merger-release-report.txt

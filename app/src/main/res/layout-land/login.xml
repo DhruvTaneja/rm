@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingStart="40dp"
+    android:paddingLeft="40dp"
+    android:paddingRight="40dp"
+    android:paddingEnd="40dp"
+    android:background="#2196F3"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/text_rm"
+        android:text="@string/resume_manager"
+        android:layout_centerHorizontal="true"
+        android:textColor="#FFF"
+        android:layout_marginTop="30dp"
+        android:textSize="30sp"
+        android:textStyle="italic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/edit_username"
+        android:cursorVisible="true"
+        android:textCursorDrawable="@null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_username"
+        android:layout_below="@id/text_rm"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="#FFF"
+        android:textColorHint="#FFF"
+        android:inputType="text">
+        <requestFocus/>
+        </EditText>
+
+    <EditText
+        android:id="@+id/edit_password"
+        android:cursorVisible="true"
+        android:textCursorDrawable="@null"
+        android:hint="@string/hint_pass"
+        android:layout_below="@id/edit_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="#FFF"
+        android:textColorHint="#FFF"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/edit_name"
+        android:hint="@string/edit_name"
+        android:layout_width="match_parent"
+        android:cursorVisible="true"
+        android:textCursorDrawable="@null"
+        android:layout_below="@id/edit_password"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="#FFF"
+        android:textColorHint="#FFF"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/button_login"
+        android:text="@string/button_login"
+        android:layout_below="@id/edit_name"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@drawable/button"
+        android:textColor="#FFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

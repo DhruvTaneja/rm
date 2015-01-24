@@ -1,0 +1,54 @@
+Name of the sharedPreferences for this app is "resume".
+
+dbRunning
+    true - db creation has started and is in progress
+    false - db creation interrupted
+
+login
+    true - if logged in
+    false - if not logged in
+
+username
+    username if logged in
+
+password
+    password if logged in
+
+name
+    name if logged in
+
+urlParams
+    the parameters used in POST request if logged in
+
+db
+    true - if database successfully created
+    false - if database not created
+
+NEW
+
+announcements
+    true - if announcements table is successfully created
+    false - if not created
+
+recruiters
+    true - if recruiters table is successfully created
+    false - if not created
+
+database
+    true - if full database created
+    false - if full database not created
+
+1stAId
+    _id of the 1st announcement for checking for new
+
+1stATitle
+    title of the 1st announcement for checking for new
+
+1stADate
+    date of the 1st announcement for checking for new
+
+1stRId
+    _id of the 1st announcement for checking for new
+
+1stRUrl
+    url of the 1st announcement for checking for new

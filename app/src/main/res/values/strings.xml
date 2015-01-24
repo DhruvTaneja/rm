@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Resume Manager</string>
+    <string name="resume_manager">Resume Manager</string>
+    <string name="title_activity_login">Login</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_pass">Password</string>
+    <string name="button_login">Login</string>
+    <string name="edit_name">Name</string>
+    <string name="title_activity_creating_db">CreatingDB</string>
+    <string name="setting_db">Setting Up The Database</string>
+    <string name="setDB_long">The database is being created. This may take up a while. You may come back later.</string>
+    <string name="desc_list_item_icon">List item icon for drawer layout</string>
+
+    <string-array name="drawer_list">
+
+        <!-- <item>Name</item> -->
+        <item>Announcements</item>
+        <item>Recruiters</item>
+        <item>Settings</item>
+        <item>Logout</item>
+        <!-- <item>Help and Feedback</item> -->
+    </string-array>
+
+    <array name="drawer_icons">
+        <item>@drawable/announcement_icon</item>
+        <item>@drawable/recruiter_icon</item>
+        <item>@drawable/settings_icon</item>
+        <item>@drawable/logout_icon</item>
+    </array>
+    <array name="settings">
+        <item>Change name</item>
+        <item>About</item>
+    </array>
+
+    <string name="title_activity_recruiter_info">RecruiterInfo</string>
+    <string name="open_for">Open For:</string>
+    <string name="eligible_courses">Eligible Courses: </string>
+    <string name="search_title">Search</string>
+    <string name="search_hint">Search</string>
+    <string name="title_activity_announcement_info">AnnouncementInfo</string>
+    <string name="menu_search">Search</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_change_name">Change Name</string>
+    <string name="change_name">Change</string>
+    <string name="cancel_name">Cancel</string>
+    <string name="dtu_logo_desc">DTU Logo</string>
+
+</resources>
